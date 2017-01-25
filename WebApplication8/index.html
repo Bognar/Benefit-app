@@ -1,0 +1,33 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+	<meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="/Content/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="/Content/stil.css">
+</head>
+<body>
+    <div class="kostur">
+        <div id="beneico"><h2> Benefiti App</h2></div>
+
+        <div ng-app="app" ng-controller="addCtrl">
+            <br> <span>Cijena paketa kojeg korisnik treba imati <i>(bez PDV-a):</i></span>
+            <span class="desno"><input type="number" ng-model="n1" /> </span></br>
+            <br> <span>Cijena paketa kojeg korisnik ima trenutno <i>(bez PDV-a):</i></span>
+            <span class="desno"><input type="number" ng-model="n2" /></span> </br>
+
+            <h4><span id="cijena">Pogodnost za billing <i>(kopiraj vrijednost u aplikaciju billing)</i>: {{ 1 - (n1 / n2)| number:6 }}</span></h4>
+        </div>
+        <div id="by"><i>App by Josip Bognar</i></div>
+    </div>
+    </div>
+    
+
+
+<script src="Scripts/angular.min.js"></script>
+<script src="Scripts/bootstrap.min.js"></script>
+<script src="Scripts/kalkulator.js"></script>
+</body>
+
+</html>
